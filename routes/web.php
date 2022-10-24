@@ -22,3 +22,8 @@ Route::get('/', function () {
 Route::get('/', function () {
     return 'welcome';
 });
+
+//設定Route跳轉頁面
+Route::get('r1', function () {
+    return redirect('r2');
+});
