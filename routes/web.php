@@ -45,3 +45,15 @@ Route::get('hello/{name?}', function($name='Everybody') {
 /*Route::get('nothing', function(){
     return 'nothing';
 });*/
+
+//設定dashbord路徑的Route
+Route::get('dashboard', function() {
+    return 'dashboard';
+});
+
+//設定另一個Route，以群組包起來設定prefix
+Route::group(['prefix' => 'admin'], function() {
+    Route::get('dashboard', function() {
+        return 'admin dashboard';
+    });
+});
