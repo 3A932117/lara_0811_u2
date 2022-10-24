@@ -23,9 +23,12 @@ Route::get('/', function () {
     return 'welcome';
 });
 
-//設定Route跳轉頁面
+//設定Route跳轉路由
 Route::get('r1', function () {
     return redirect('r2');
+});
+Route::get('r2', function() {
+    return view('welcome');
 });
 
 //修改Route接受參數
@@ -36,9 +39,9 @@ Route::get('r1', function () {
 //修改參數成選擇性
 Route::get('hello/{name?}', function($name='Everybody') {
     return 'Hello, '.$name;
-});
+})->name('hello.index');//為Route取名為hello.index
 
 //隨便增加路由
-Route::get('nothing', function(){
+/*Route::get('nothing', function(){
     return 'nothing';
-});
+});*/
