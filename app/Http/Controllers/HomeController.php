@@ -14,7 +14,8 @@ class HomeController extends Controller
     public function index()
     {
         //將Route的內容搬置Controller內
-        return 'index';
+        //return 'index';
+        return view('welcome');
     }
 
     /**
