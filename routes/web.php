@@ -37,3 +37,8 @@ Route::get('r1', function () {
 Route::get('hello/{name?}', function($name='Everybody') {
     return 'Hello, '.$name;
 });
+
+//隨便增加路由
+Route::get('nothing', function(){
+    return 'nothing';
+});
